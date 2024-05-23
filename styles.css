@@ -36,3 +36,18 @@ th {
 section {
     margin-bottom: 2em;
 }
+
+/* Styling for ranking tables */
+table.golden tr:first-child {
+    background-color: gold;
+    font-weight: bold;
+    border: 2px solid black; /* Thicker border for gold row */
+}
+
+table.silver tr:nth-child(2) {
+    background-color: silver;
+}
+
+table.bronze tr:nth-child(3) {
+    background-color: #cd7f32; /* Bronze color */
+}
