@@ -135,3 +135,10 @@ section#individual-stats table tr:hover {
     background-color: #004080; /* Match table background */
     z-index: 2; /* Ensure it stays above other content */
 }
+/* Adjustments for table containers */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling for mobile devices */
+    margin-bottom: 1em; /* Add separation from the next element */
+    max-width: calc(100% - 4em); /* Limit maximum width to prevent extension beyond padding */
+    margin: 0 auto; /* Center the table within the container */
+}
