@@ -1,9 +1,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f8f9fa; /* Fallback color */
-    background: linear-gradient(135deg, #f8f9fa 0%, #cbd2d9 100%);
+    background: #001f3f; /* Solid navy blue background */
     margin: 0;
     padding: 0;
+    color: white; /* Ensure text is visible on navy blue background */
 }
 
 header {
@@ -11,85 +11,98 @@ header {
     color: white;
     padding: 1em;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for header */
+    border-radius: 12px; /* Rounded corners */
+    margin-bottom: 1em; /* Add separation from the next section */
 }
 
 main {
     padding: 2em;
 }
 
+section {
+    margin-bottom: 2em; /* Add separation between sections */
+    background: #004080; /* Solid darker blue for contrast */
+    border-radius: 12px; /* Rounded corners */
+    padding: 1em; /* Padding for sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for sections */
+}
+
+h2 {
+    text-align: center; /* Center the headings */
+}
+
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling for mobile devices */
+    margin-bottom: 1em; /* Add separation from the next element */
+}
+
 table {
-    width: auto;
+    width: 100%;
     border-collapse: collapse;
-    margin-top: 1em;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #40b4e0; /* Slightly different blue shade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for tables */
+    background-color: #007bff; /* Different blue shade for tables */
 }
 
 th, td {
     border: 1px solid #dee2e6;
-    padding: 0.8em;
+    padding: 0.8em; /* Adjusted cell padding */
     text-align: left;
     white-space: nowrap;
     transition: background-color 0.3s;
 }
 
 th {
-    background-color: #005b96;
+    background-color: #005b96; /* Dark blue background for table headers */
     color: #f8f9fa;
     font-size: 1.1em;
-    border-radius: 8px 8px 0 0;
-}
-
-section {
-    margin-bottom: 1em;
-    background: #add8e6;
-    border-radius: 12px;
-    padding: 1em;
-}
-
-section#individual-stats {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-.table-container {
-    max-width: 100%;
-    overflow-x: auto;
-    position: relative;
-}
-
-thead th {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: #005b96;
-    z-index: 1;
-}
-
-tbody td:first-child,
-thead th:first-child {
-    position: -webkit-sticky;
-    position: sticky;
-    left: 0;
-    background-color: #005b96;
-    z-index: 1;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
 }
 
 /* Styling for ranking tables */
-table.golden tr:first-child {
+section table tr:first-child {
     background-color: gold;
 }
 
-table.silver tr:nth-child(2) {
+section table tr:nth-child(2) {
     background-color: silver;
 }
 
-table.bronze tr:nth-child(3) {
+section table tr:nth-child(3) {
     background-color: #cd7f32;
+}
+
+/* Hover effect for ranking table rows */
+section table tr:first-child:hover {
+    background-color: #ffe135; /* Lighter shade of gold */
+}
+
+section table tr:nth-child(2):hover {
+    background-color: #d3d3d3; /* Lighter shade of silver */
+}
+
+section table tr:nth-child(3):hover {
+    background-color: #d2a679; /* Lighter shade of bronze */
+}
+
+/* Hover effect for other table rows */
+tr:hover {
+    background-color: #add8e6; /* Light blue hover color for all rows */
+}
+
+/* Centering ranking tables and headings */
+section#batting-rankings,
+section#bowling-rankings,
+section#fielding-rankings,
+section#league-mvp {
+    margin: 0 auto; /* Center horizontally */
+    width: fit-content; /* Adjust width to content */
+    padding-left: 16em; /* Consistent lateral padding */
+    padding-right: 16em; /* Consistent lateral padding */
+    margin-top: 2em; /* Vertical padding to separate sections */
+    margin-bottom: 2em; /* Vertical padding to separate sections */
 }
 
 /* Smaller individual stats table */
@@ -124,66 +137,25 @@ td:first-child {
     font-size: 1.1em;
 }
 
-/* Hover effect for table rows */
-tr:hover {
-    background-color: #add8e6;
+/* Scrollable individual player statistics table */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 1em;
+    background: #004080; /* Match section background */
+    border-radius: 12px;
+    padding: 1em; /* Add padding around the table */
 }
 
-/* Hover effect for ranking table rows */
-section#batting-rankings table tr:first-child:hover,
-section#bowling-rankings table tr:first-child:hover,
-section#fielding-rankings table tr:first-child:hover,
-section#league-mvp table tr:first-child:hover {
-    background-color: #ffd700;
+.table-container table {
+    width: max-content; /* Ensure table takes up necessary width */
+    margin: 0 auto; /* Center the table within the container */
 }
 
-section#batting-rankings table tr:nth-child(2):hover,
-section#bowling-rankings table tr:nth-child(2):hover,
-section#fielding-rankings table tr:nth-child(2):hover,
-section#league-mvp table tr:nth-child(2):hover {
-    background-color: #d3d3d3;
-}
-
-section#batting-rankings table tr:nth-child(3):hover,
-section#bowling-rankings table tr:nth-child(3):hover,
-section#fielding-rankings table tr:nth-child(3):hover,
-section#league-mvp table tr:nth-child(3):hover {
-    background-color: #e6b8a2;
-}
-
-/* Centering ranking tables and headings */
-section#batting-rankings,
-section#bowling-rankings,
-section#fielding-rankings,
-section#league-mvp {
-    margin: 0 auto;
-    width: fit-content;
-}
-
-section#batting-rankings h2,
-section#bowling-rankings h2,
-section#fielding-rankings h2,
-section#league-mvp h2 {
-    text-align: center;
-}
-
-/* Adjust lateral padding for ranking tables */
-section#batting-rankings {
-    padding-left: 16em;
-    padding-right: 15em;
-}
-
-section#bowling-rankings {
-    padding-left: 22em;
-    padding-right: 22em;
-}
-
-section#fielding-rankings {
-    padding-left: 28em;
-    padding-right: 28em;
-}
-
-section#league-mvp {
-    padding-left: 30em;
-    padding-right: 30em;
+/* Freeze first column */
+.table-container th:first-child,
+.table-container td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #007bff; /* Match table background */
+    z-index: 1; /* Ensure it stays above other content */
 }
