@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Cricket League Stats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mini Cricket League Stats</h1>
+    </header>
+    <main>
+        <section id="individual-stats">
+            <h2>Individual Player Statistics</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Innings Batted</th>
+                        <th>Runs Scored</th>
+                        <th>Balls Faced</th>
+                        <th>Highest Score</th>
+                        <th>Batting Average</th>
+                        <th>Not Outs</th>
+                        <th>Strike Rate</th>
+                        <th>Fours</th>
+                        <th>Sixes</th>
+                        <th>Ducks</th>
+                        <th>30s</th>
+                        <th>50s</th>
+                        <th>Overs Bowled</th>
+                        <th>Wickets Taken</th>
+                        <th>Dot Balls</th>
+                        <th>Runs Given</th>
+                        <th>Economy Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="individualStatsTableBody">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="batting-rankings">
+            <h2>Batting Rankings (Point System)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Batting Points</th>
+                        <th>Runs</th>
+                        <th>Batting Average</th>
+                        <th>Strike Rate</th>
+                        <th>Fours</th>
+                        <th>Sixes</th>
+                        <th>30s</th>
+                        <th>50s</th>
+                    </tr>
+                </thead>
+                <tbody id="battingRankingsTableBody">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="bowling-rankings">
+            <h2>Bowling Rankings (Point System)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Bowling Points</th>
+                        <th>Wickets</th>
+                        <th>Economy</th>
+                        <th>Dot Ball Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="bowlingRankingsTableBody">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="fielding-rankings">
+            <h2>Fielding Rankings (Point System)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Fielding Points</th>
+                        <th>Run Outs</th>
+                        <th>Catches</th>
+                    </tr>
+                </thead>
+                <tbody id="fieldingRankingsTableBody">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="league-mvp">
+            <h2>League MVP</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>MVP Points</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                    </tr>
+                </thead>
+                <tbody id="leagueMvpTableBody">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
