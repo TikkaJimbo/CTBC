@@ -1,3 +1,4 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -20,6 +21,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1em;
+    border-radius: 10px; /* Curved edges for tables */
+    overflow: hidden; /* Hide overflow from curved edges */
 }
 
 th, td {
@@ -51,3 +54,27 @@ table.silver tr:nth-child(2) {
 table.bronze tr:nth-child(3) {
     background-color: #cd7f32; /* Bronze color */
 }
+
+/* Smaller individual stats table */
+section#individual-stats table {
+    font-size: 0.9em;
+}
+
+/* Smaller padding for individual stats table cells */
+section#individual-stats th,
+section#individual-stats td {
+    padding: 0.5em;
+}
+
+/* Smaller font size for individual stats table headings */
+section#individual-stats th {
+    font-size: 0.9em;
+}
+
+/* Player names styling */
+th:first-child,
+td:first-child {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Beautiful font */
+}
+
