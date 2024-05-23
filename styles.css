@@ -195,3 +195,17 @@ section#fielding-rankings table tr:nth-child(3),
 section#league-mvp table tr:nth-child(3) {
     background-color: #cd7f32;
 }
+/* Adjust lateral padding for ranking tables */
+section#batting-rankings,
+section#bowling-rankings,
+section#fielding-rankings,
+section#league-mvp,
+section#ranking-explanation {
+    padding-left: 5vw; /* Left padding */
+    padding-right: 5vw; /* Right padding */
+}
+/* Adjust lateral padding for individual stats table */
+section#individual-stats {
+    padding-left: 5vw; /* Left padding */
+    padding-right: 5vw; /* Right padding */
+}
