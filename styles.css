@@ -1,17 +1,17 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #001f3f; /* Solid navy blue background */
+    background: #f0f0f0; /* Light gray background */
     margin: 0;
     padding: 0;
-    color: white; /* Ensure text is visible on navy blue background */
+    color: #333; /* Dark gray text */
 }
 
 header {
-    background: linear-gradient(90deg, #343a40, #1c1e22);
+    background: #333; /* Dark gray header background */
     color: white;
     padding: 1em;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for header */
     border-radius: 12px; /* Rounded corners */
     margin-bottom: 1em; /* Add separation from the next section */
 }
@@ -22,10 +22,10 @@ main {
 
 section {
     margin-bottom: 2em; /* Add separation between sections */
-    background: #004080; /* Solid darker blue for contrast */
+    background: white; /* White background for sections */
     border-radius: 12px; /* Rounded corners */
-    padding: 1em; /* Padding for sections */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for sections */
+    padding: 1.5em; /* Padding for sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for sections */
 }
 
 h2 {
@@ -43,7 +43,7 @@ table {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for tables */
-    background-color: #007bff; /* Different blue shade for tables */
+    background-color: white; /* White background for tables */
 }
 
 th, td {
@@ -55,107 +55,42 @@ th, td {
 }
 
 th {
-    background-color: #005b96; /* Dark blue background for table headers */
-    color: #f8f9fa;
+    background-color: #333; /* Dark gray background for table headers */
+    color: white;
     font-size: 1.1em;
     border-radius: 8px 8px 0 0; /* Rounded top corners */
 }
 
 /* Styling for ranking tables */
 section table tr:first-child {
-    background-color: gold;
+    background-color: #ffc107; /* Yellow background for first row */
+    color: black; /* Black text */
 }
 
 section table tr:nth-child(2) {
-    background-color: silver;
+    background-color: #e0e0e0; /* Light gray background for second row */
+    color: black; /* Black text */
 }
 
 section table tr:nth-child(3) {
-    background-color: #cd7f32;
+    background-color: #8d6e63; /* Brown background for third row */
+    color: white; /* White text */
 }
 
 /* Hover effect for ranking table rows */
 section table tr:first-child:hover {
-    background-color: #ffe135; /* Lighter shade of gold */
+    background-color: #ffe082; /* Light yellow background on hover */
 }
 
 section table tr:nth-child(2):hover {
-    background-color: #d3d3d3; /* Lighter shade of silver */
+    background-color: #bdbdbd; /* Light gray background on hover */
 }
 
 section table tr:nth-child(3):hover {
-    background-color: #d2a679; /* Lighter shade of bronze */
+    background-color: #a1887f; /* Light brown background on hover */
 }
 
 /* Hover effect for other table rows */
 tr:hover {
-    background-color: #add8e6; /* Light blue hover color for all rows */
-}
-
-/* Centering ranking tables and headings */
-section#batting-rankings,
-section#bowling-rankings,
-section#fielding-rankings,
-section#league-mvp {
-    margin: 0 auto; /* Center horizontally */
-    width: fit-content; /* Adjust width to content */
-    padding-left: 16em; /* Consistent lateral padding */
-    padding-right: 16em; /* Consistent lateral padding */
-    margin-top: 2em; /* Vertical padding to separate sections */
-    margin-bottom: 2em; /* Vertical padding to separate sections */
-}
-
-/* Smaller individual stats table */
-section#individual-stats table {
-    font-size: 0.9em;
-}
-
-section#individual-stats th,
-section#individual-stats td {
-    padding: 0.5em;
-}
-
-section#individual-stats th {
-    font-size: 0.9em;
-}
-
-/* Styling for common explanation */
-#ranking-explanation p {
-    margin-bottom: 1.5em;
-    line-height: 1.6;
-}
-
-#ranking-explanation strong {
-    font-weight: bold;
-}
-
-/* Player names styling */
-th:first-child,
-td:first-child {
-    font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.1em;
-}
-
-/* Scrollable individual player statistics table */
-.table-container {
-    overflow-x: auto;
-    margin-bottom: 1em;
-    background: #004080; /* Match section background */
-    border-radius: 12px;
-    padding: 1em; /* Add padding around the table */
-}
-
-.table-container table {
-    width: max-content; /* Ensure table takes up necessary width */
-    margin: 0 auto; /* Center the table within the container */
-}
-
-/* Freeze first column */
-.table-container th:first-child,
-.table-container td:first-child {
-    position: sticky;
-    left: 0;
-    background-color: #007bff; /* Match table background */
-    z-index: 1; /* Ensure it stays above other content */
+    background-color: #f5f5f5; /* Light gray hover color for all rows */
 }
