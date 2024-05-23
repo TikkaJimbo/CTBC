@@ -1,20 +1,18 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f8f9fa; /* Fallback color */
-    /* Gradient background */
     background: linear-gradient(135deg, #f8f9fa 0%, #cbd2d9 100%);
     margin: 0;
     padding: 0;
 }
 
 header {
-    /* Gradient background */
     background: linear-gradient(90deg, #343a40, #1c1e22);
     color: white;
     padding: 1em;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for header */
-    border-radius: 2px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
 main {
@@ -27,37 +25,63 @@ table {
     margin-top: 1em;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for tables */
-    background-color: #5DADE2; /* Slightly different blue shade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #40b4e0; /* Slightly different blue shade */
 }
 
 th, td {
     border: 1px solid #dee2e6;
-    padding: 0.8em; /* Adjusted cell padding */
+    padding: 0.8em;
     text-align: left;
     white-space: nowrap;
     transition: background-color 0.3s;
 }
 
 th {
-    background-color: #005b96; /* Dark blue background */
+    background-color: #005b96;
     color: #f8f9fa;
     font-size: 1.1em;
-    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    border-radius: 8px 8px 0 0;
 }
 
 section {
     margin-bottom: 1em;
-    background: #add8e6; /* Light blue background */
-    border-radius: 12px; /* Rounded corners */
-    padding: 1em; /* Padding for sections */
+    background: #add8e6;
+    border-radius: 12px;
+    padding: 1em;
+}
+
+section#individual-stats {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+}
+
+thead th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #005b96;
+    z-index: 1;
+}
+
+tbody td:first-child,
+thead th:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    background-color: #005b96;
+    z-index: 1;
 }
 
 /* Styling for ranking tables */
 table.golden tr:first-child {
     background-color: gold;
-    font-weight: bold;
-    border: 2px solid black;
 }
 
 table.silver tr:nth-child(2) {
@@ -66,33 +90,6 @@ table.silver tr:nth-child(2) {
 
 table.bronze tr:nth-child(3) {
     background-color: #cd7f32;
-}
-
-/* Hover effect for table rows */
-tr:hover {
-    background-color: #47E2DA; /* Light blue hover color for all rows */
-}
-
-/* Hover effect for ranking table rows */
-section#batting-rankings table tr:first-child:hover,
-section#bowling-rankings table tr:first-child:hover,
-section#fielding-rankings table tr:first-child:hover,
-section#league-mvp table tr:first-child:hover {
-    background-color: #ffecb3 !important; /* Lighter shade of gold */
-}
-
-section#batting-rankings table tr:nth-child(2):hover,
-section#bowling-rankings table tr:nth-child(2):hover,
-section#fielding-rankings table tr:nth-child(2):hover,
-section#league-mvp table tr:nth-child(2):hover {
-    background-color: #e0e0e0 !important; /* Lighter shade of silver */
-}
-
-section#batting-rankings table tr:nth-child(3):hover,
-section#bowling-rankings table tr:nth-child(3):hover,
-section#fielding-rankings table tr:nth-child(3):hover,
-section#league-mvp table tr:nth-child(3):hover {
-    background-color: #f5ccba !important; /* Lighter shade of bronze */
 }
 
 /* Smaller individual stats table */
@@ -127,90 +124,66 @@ td:first-child {
     font-size: 1.1em;
 }
 
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #add8e6;
+}
+
+/* Hover effect for ranking table rows */
+section#batting-rankings table tr:first-child:hover,
+section#bowling-rankings table tr:first-child:hover,
+section#fielding-rankings table tr:first-child:hover,
+section#league-mvp table tr:first-child:hover {
+    background-color: #ffd700;
+}
+
+section#batting-rankings table tr:nth-child(2):hover,
+section#bowling-rankings table tr:nth-child(2):hover,
+section#fielding-rankings table tr:nth-child(2):hover,
+section#league-mvp table tr:nth-child(2):hover {
+    background-color: #d3d3d3;
+}
+
+section#batting-rankings table tr:nth-child(3):hover,
+section#bowling-rankings table tr:nth-child(3):hover,
+section#fielding-rankings table tr:nth-child(3):hover,
+section#league-mvp table tr:nth-child(3):hover {
+    background-color: #e6b8a2;
+}
+
 /* Centering ranking tables and headings */
 section#batting-rankings,
 section#bowling-rankings,
 section#fielding-rankings,
 section#league-mvp {
-    margin: 0 auto; /* Center horizontally */
-    width: fit-content; /* Adjust width to content */
+    margin: 0 auto;
+    width: fit-content;
 }
 
 section#batting-rankings h2,
 section#bowling-rankings h2,
 section#fielding-rankings h2,
 section#league-mvp h2 {
-    text-align: center; /* Center the headings */
+    text-align: center;
 }
 
 /* Adjust lateral padding for ranking tables */
 section#batting-rankings {
-    padding-left: 16em; /* Left padding for batting rankings */
-    padding-right: 15em; /* Right padding for batting rankings */
+    padding-left: 16em;
+    padding-right: 15em;
 }
 
 section#bowling-rankings {
-    padding-left: 22em; /* Left padding for bowling rankings */
-    padding-right: 22em; /* Right padding for bowling rankings */
+    padding-left: 22em;
+    padding-right: 22em;
 }
 
 section#fielding-rankings {
-    padding-left: 28em; /* Left padding for fielding rankings */
-    padding-right: 28em; /* Right padding for fielding rankings */
+    padding-left: 28em;
+    padding-right: 28em;
 }
 
 section#league-mvp {
-    padding-left: 30em; /* Left padding for league MVP rankings */
-    padding-right: 30em; /* Right padding for league MVP rankings */
-}
-
-/* Ensure separation between sections */
-section#batting-rankings,
-section#bowling-rankings,
-section#fielding-rankings,
-section#league-mvp {
-    margin-bottom: 2em; /* Separate the sections with a margin */
-}
-
-/* Ensure the first row of each ranking table has a gold background */
-section#batting-rankings table tr:first-child,
-section#bowling-rankings table tr:first-child,
-section#fielding-rankings table tr:first-child,
-section#league-mvp table tr:first-child {
-    background-color: gold;
-}
-
-/* Ensure the second row of each ranking table has a silver background */
-section#batting-rankings table tr:nth-child(2),
-section#bowling-rankings table tr:nth-child(2),
-section#fielding-rankings table tr:nth-child(2),
-section#league-mvp table tr:nth-child(2) {
-    background-color: silver;
-}
-
-/* Ensure the third row of each ranking table has a bronze background */
-section#batting-rankings table tr:nth-child(3),
-section#bowling-rankings table tr:nth-child(3),
-section#fielding-rankings table tr:nth-child(3),
-section#league-mvp table tr:nth-child(3) {
-    background-color: #cd7f32;
-}
-/* Adjust lateral padding for ranking tables */
-section#batting-rankings,
-section#bowling-rankings,
-section#fielding-rankings,
-section#league-mvp,
-section#ranking-explanation {
-    padding-left: 5vw; /* Left padding */
-    padding-right: 5vw; /* Right padding */
-}
-/* Adjust lateral padding for individual stats table */
-section#individual-stats {
-    padding-left: 5vw; /* Left padding */
-    padding-right: 5vw; /* Right padding */
-}
-/* Apply responsive design for individual stats table */
-section#individual-stats {
-    overflow-x: auto; /* Allow horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    padding-left: 30em;
+    padding-right: 30em;
 }
