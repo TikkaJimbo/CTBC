@@ -36,7 +36,7 @@ const individualStats = [
 ];
 
 const battingRankings = [
-    { player: 'Tikka', battingPoints: 25.6, mostRuns: 17, battingAverage: 17.0, strikeRate: 121.4, mostFours: 0, mostSixes: 0, mostThirties: 0, mostFifties: 0 },
+    { player: 'Tikka', battingPoints: 25.6, mostRuns: 17, battingAverage: 17.0, strikeRate: 121.4, mostFours: 0, mostSixes: 2, mostThirties: 0, mostFifties: 0 },
     { player: 'Oscar', battingPoints: 19.4, mostRuns: 13, battingAverage: 13.0, strikeRate: 130, mostFours: 0, mostSixes: 1, mostThirties: 0, mostFifties: 0 },
     { player: 'Vidura', battingPoints: 7.4, mostRuns: 7, battingAverage: 3.5, strikeRate: 140, mostFours: 0, mostSixes: 1, mostThirties: 0, mostFifties: 0 },
     { player: 'Ranul', battingPoints: 4.4, mostRuns: 8, battingAverage: 4.0, strikeRate: 72.7, mostFours: 1, mostSixes: 0, mostThirties: 0, mostFifties: 0 },
