@@ -49,11 +49,11 @@ const battingRankings = [
 
 const bowlingRankings = [
     { player: 'Oscar', bowlingPoints: 38.4, mostWickets: 3, bestEconomy: 1.3, dotBallPercentage: 88.9 },
-    { player: 'Navin', bowlingPoints: 4.2, mostWickets: 3, bestEconomy: 8.7, dotBallPercentage: 45.5 },
-    { player: 'Tikka', bowlingPoints: 6.25, mostWickets: 2, bestEconomy: 4.8, dotBallPercentage: 50.0 },
-    { player: 'Amila', bowlingPoints: 5, mostWickets: 2, bestEconomy: 5.0, dotBallPercentage: 41.7 },
     { player: 'Ranul', bowlingPoints: 8, mostWickets: 1, bestEconomy: 2.5, dotBallPercentage: 58.3 },
+    { player: 'Tikka', bowlingPoints: 6.25, mostWickets: 2, bestEconomy: 4.8, dotBallPercentage: 50.0 },
     { player: 'Vidura', bowlingPoints: 6.1, mostWickets: 1, bestEconomy: 3.0, dotBallPercentage: 50.0 },
+    { player: 'Amila', bowlingPoints: 5, mostWickets: 2, bestEconomy: 5.0, dotBallPercentage: 41.7 },
+    { player: 'Navin', bowlingPoints: 4.2, mostWickets: 3, bestEconomy: 8.7, dotBallPercentage: 45.5 },
     { player: 'Weera', bowlingPoints: 1.93, mostWickets: 1, bestEconomy: 9.5, dotBallPercentage: 50.0 },
     { player: 'Janna', bowlingPoints: 2, mostWickets: 0, bestEconomy: 5.0, dotBallPercentage: 45.5 }
     // Add more ranking data here
@@ -117,3 +117,4 @@ window.onload = () => {
         'player', 'mvpPoints', 'runs', 'wickets'
     ]);
 };
+
