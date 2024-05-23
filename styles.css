@@ -209,3 +209,8 @@ section#individual-stats {
     padding-left: 5vw; /* Left padding */
     padding-right: 5vw; /* Right padding */
 }
+/* Apply responsive design for individual stats table */
+section#individual-stats {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
