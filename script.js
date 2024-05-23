@@ -117,4 +117,3 @@ window.onload = () => {
         'player', 'mvpPoints', 'runs', 'wickets'
     ]);
 };
-
