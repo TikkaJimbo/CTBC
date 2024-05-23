@@ -12,7 +12,7 @@ header {
     padding: 1em;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for header */
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 2px; /* Rounded corners */
     margin-bottom: 1em; /* Add separation from the next section */
 }
 
@@ -93,4 +93,45 @@ section table tr:nth-child(3):hover {
 /* Hover effect for other table rows */
 tr:hover {
     background-color: #f5f5f5; /* Light gray hover color for all rows */
+}
+/* Styling for individual stats table */
+section#individual-stats table {
+    background-color: white; /* White background for table */
+}
+
+/* Hover effect for individual stats table */
+section#individual-stats table tr:hover {
+    background-color: #f2f2f2; /* Light grey hover color */
+}
+
+/* Resetting colors for individual stats table */
+section#individual-stats table tr:first-child {
+    background-color: initial; /* Reset to default background color */
+}
+
+section#individual-stats table tr:nth-child(2),
+section#individual-stats table tr:nth-child(3) {
+    background-color: initial; /* Reset to default background color */
+    color: initial; /* Reset to default text color */
+}
+/* Hover effect for individual stats table */
+section#individual-stats table tr:hover {
+    background-color: #f2f2f2; /* Light grey hover color */
+    color: black; /* Ensure text color changes on hover */
+}
+/* Freeze first column for batting rankings */
+#batting-rankings .table-container th:first-child,
+#batting-rankings .table-container td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #004080; /* Match table background */
+    z-index: 1; /* Ensure it stays above other content */
+}
+
+/* Ensure table heading remains fixed for batting rankings */
+#batting-rankings .table-container thead {
+    position: sticky;
+    top: 0;
+    background-color: #004080; /* Match table background */
+    z-index: 2; /* Ensure it stays above other content */
 }
