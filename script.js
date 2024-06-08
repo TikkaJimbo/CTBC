@@ -1,119 +1,95 @@
-// Example data
-const individualStats = [
-    {
-        player: 'Tikka', inningsBatted: 2, runsScored: 17, ballsFaced: 14, highestScore: 14, battingAverage: 17.0, notOuts: 1, strikeRate: 121.43,
-        fours: 0, sixes: 2, ducks: 0, thirties: 0, fifties: 0, oversBowled: 1.4, wicketsTaken: 2, dotBalls: 5, runsGiven: 8, economyRate: 4.8
-    },
-    {
-        player: 'Vidura', inningsBatted: 2, runsScored: 7, ballsFaced: 5, highestScore: 6, battingAverage: 3.50, notOuts: 0, strikeRate: 140.0,
-        fours: 0, sixes: 1, ducks: 0, thirties: 0, fifties: 0, oversBowled: 2.0, wicketsTaken: 1, dotBalls: 6, runsGiven: 6, economyRate: 3.0
-    },
-    {
-        player: 'Ranul', inningsBatted: 2, runsScored: 8, ballsFaced: 11, highestScore: 4, battingAverage: 4.00, notOuts: 0, strikeRate: 72.73,
-        fours: 1, sixes: 0, ducks: 0, thirties: 0, fifties: 0, oversBowled: 2.0, wicketsTaken: 1, dotBalls: 7, runsGiven: 5, economyRate: 2.5
-    },
-    {
-        player: 'Weera', inningsBatted: 2, runsScored: 7, ballsFaced: 12, highestScore: 7, battingAverage: 3.50, notOuts: 0, strikeRate: 58.33,
-        fours: 1, sixes: 0, ducks: 1, thirties: 0, fifties: 0, oversBowled: 2.0, wicketsTaken: 1, dotBalls: 6, runsGiven: 19, economyRate: 9.5
-    },
-    {
-        player: 'Navin', inningsBatted: 2, runsScored: 5, ballsFaced: 11, highestScore: 4, battingAverage: 2.50, notOuts: 0, strikeRate: 45.45,
-        fours: 0, sixes: 0, ducks: 0, thirties: 0, fifties: 0, oversBowled: 1.5, wicketsTaken: 3, dotBalls: 5, runsGiven: 16, economyRate: 8.73
-    },
-    {
-        player: 'Janna', inningsBatted: 2, runsScored: 2, ballsFaced: 5, highestScore: 2, battingAverage: 1.00, notOuts: 0, strikeRate: 40.00,
-        fours: 0, sixes: 0, ducks: 1, thirties: 0, fifties: 0, oversBowled: 1.0, wicketsTaken: 0, dotBalls: 3, runsGiven: 5, economyRate: 5.0
-    },
-    {
-        player: 'Amila', inningsBatted: 2, runsScored: 6, ballsFaced: 15, highestScore: 3, battingAverage: 3.00, notOuts: 0, strikeRate: 40.00,
-        fours: 0, sixes: 0, ducks: 1, thirties: 0, fifties: 0, oversBowled: 2.0, wicketsTaken: 2, dotBalls: 5, runsGiven: 10, economyRate: 5.0
-    },
-    {
-        player: 'Oscar', inningsBatted: 2, runsScored: 13, ballsFaced: 10, highestScore: 10, battingAverage: 13.00, notOuts: 1, strikeRate: 130.00,
-        fours: 0, sixes: 1, ducks: 0, thirties: 0, fifties: 0, oversBowled: 1.3, wicketsTaken: 3, dotBalls: 8, runsGiven: 2, economyRate: 1.33
-    }
-    // Add more player stats here
-];
+document.addEventListener('DOMContentLoaded', function() {
+    const basicStats = [
+        { Player: 'Janna', Runs: 28, 'Balls Faced': 32, 'Not Outs': 2, Avg: 9.33, SR: 87.5, 'Dot Ball %': 37.5 },
+        { Player: 'Oscar', Runs: 20, 'Balls Faced': 22, 'Not Outs': 1, Avg: 4, SR: 90.9, 'Dot Ball %': 54.54 },
+        { Player: 'Weera', Runs: 34, 'Balls Faced': 42, 'Not Outs': 1, Avg: 8.5, SR: 80.95, 'Dot Ball %': 69 },
+        { Player: 'Tikka', Runs: 43, 'Balls Faced': 29, 'Not Outs': 1, Avg: 10.75, SR: 148.3, 'Dot Ball %': 51.72 },
+        { Player: 'Ranul', Runs: 55, 'Balls Faced': 30, 'Not Outs': 1, Avg: 18.3, SR: 183.3, 'Dot Ball %': 33.3 },
+        { Player: 'Navin', Runs: 19, 'Balls Faced': 26, 'Not Outs': 1, Avg: 4.75, SR: 73.1, 'Dot Ball %': 50 },
+        { Player: 'Amila', Runs: 6, 'Balls Faced': 13, 'Not Outs': 0, Avg: 3, SR: 46.2, 'Dot Ball %': 53.8 },
+        { Player: 'Vidura', Runs: 7, 'Balls Faced': 5, 'Not Outs': 0, Avg: 3.5, SR: 140, 'Dot Ball %': 60 }, 
+        { Player: 'Pamodh', Runs: 2, 'Balls Faced': 9, 'Not Outs': 0, Avg: 1, SR: 22.2, 'Dot Ball %': 77.8 },
+        { Player: 'Ishan', Runs: 0, 'Balls Faced': 4, 'Not Outs': 0, Avg: 0, SR: 0, 'Dot Ball %': 100 },
+        { Player: 'Hasintha', Runs: 3, 'Balls Faced': 14, 'Not Outs': 1, Avg: 3, SR: 21.42, 'Dot Ball %': 45 }
+    ];
 
-const battingRankings = [
-    { player: 'Tikka', battingPoints: 25.6, mostRuns: 17, battingAverage: 17.0, strikeRate: 121.4, mostFours: 0, mostSixes: 2, mostThirties: 0, mostFifties: 0 },
-    { player: 'Oscar', battingPoints: 19.4, mostRuns: 13, battingAverage: 13.0, strikeRate: 130, mostFours: 0, mostSixes: 1, mostThirties: 0, mostFifties: 0 },
-    { player: 'Vidura', battingPoints: 7.4, mostRuns: 7, battingAverage: 3.5, strikeRate: 140, mostFours: 0, mostSixes: 1, mostThirties: 0, mostFifties: 0 },
-    { player: 'Ranul', battingPoints: 4.4, mostRuns: 8, battingAverage: 4.0, strikeRate: 72.7, mostFours: 1, mostSixes: 0, mostThirties: 0, mostFifties: 0 },
-    { player: 'Navin', battingPoints: 1.1, mostRuns: 6, battingAverage: 3.0, strikeRate: 45.5, mostFours: 0, mostSixes: 0, mostThirties: 0, mostFifties: 0 },
-    { player: 'Weera', battingPoints: -1.4, mostRuns: 7, battingAverage: 3.5, strikeRate: 58.3, mostFours: 1, mostSixes: 0, mostThirties: 0, mostFifties: 0 },
-    { player: 'Amila', battingPoints: -3.8, mostRuns: 6, battingAverage: 3.0, strikeRate: 40.0, mostFours: 0, mostSixes: 0, mostThirties: 0, mostFifties: 0 },
-    { player: 'Janna', battingPoints: -4.6, mostRuns: 2, battingAverage: 1.0, strikeRate: 40.0, mostFours: 0, mostSixes: 0, mostThirties: 0, mostFifties: 0 }
-    // Add more ranking data here
-];
+    const advancedStats = [
+        { Player: 'Janna', '% Middled': 65.3, '% Edged': 15.6, '% Missed': 12.5, '% Runs in Boundaries': 35.7, '% Boundary Balls': 6.25, 'Death Over SR': 122.2, 'PP SR': 0, 'LMS SR': 100, 'LMS Avg': 8 },
+        { Player: 'Oscar', '% Middled': 59.09, '% Edged': 22.72, '% Missed': 18.18, '% Runs in Boundaries': 60, '% Boundary Balls': 9.09, 'Death Over SR': 0, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Weera', '% Middled': 45.23, '% Edged': 30.95, '% Missed': 21.42, '% Runs in Boundaries': 76.47, '% Boundary Balls': 11.9, 'Death Over SR': 230, 'PP SR': 0, 'LMS SR': 166.6, 'LMS Avg': 25 },
+        { Player: 'Tikka', '% Middled': 44.8, '% Edged': 27.58, '% Missed': 27.58, '% Runs in Boundaries': 79.06, '% Boundary Balls': 20.68, 'Death Over SR': 137.5, 'PP SR': 0, 'LMS SR': 157.1, 'LMS Avg': 5.5 },
+        { Player: 'Ranul', '% Middled': 70, '% Edged': 30, '% Missed': 0, '% Runs in Boundaries': 76.3, '% Boundary Balls': 26.6, 'Death Over SR': 233.3, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Navin', '% Middled': 50, '% Edged': 23.07, '% Missed': 26.92, '% Runs in Boundaries': 31.57, '% Boundary Balls': 3.84, 'Death Over SR': 120, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Amila', '% Middled': 30.76, '% Edged': 53.84, '% Missed': 15.34, '% Runs in Boundaries': 0, '% Boundary Balls': 0, 'Death Over SR': 0, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Vidura', '% Middled': 100, '% Edged': 0, '% Missed': 0, '% Runs in Boundaries': 85.71, '% Boundary Balls': 20, 'Death Over SR': 0, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Ishan', '% Middled': 50, '% Edged': 25, '% Missed': 25, '% Runs in Boundaries': 0, '% Boundary Balls': 0, 'Death Over SR': 0, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Pamodh', '% Middled': 55.55, '% Edged': 33.33, '% Missed': 11.11, '% Runs in Boundaries': 0, '% Boundary Balls': 0, 'Death Over SR': 0, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 },
+        { Player: 'Hasintha', '% Middled': 35.71, '% Edged': 7.14, '% Missed': 57.14, '% Runs in Boundaries': 0, '% Boundary Balls': 0, 'Death Over SR': 0, 'PP SR': 0, 'LMS SR': 0, 'LMS Avg': 0 }
+    ];
 
-const bowlingRankings = [
-    { player: 'Oscar', bowlingPoints: 38.4, mostWickets: 3, bestEconomy: 1.3, dotBallPercentage: 88.9 },
-    { player: 'Ranul', bowlingPoints: 8, mostWickets: 1, bestEconomy: 2.5, dotBallPercentage: 58.3 },
-    { player: 'Tikka', bowlingPoints: 6.25, mostWickets: 2, bestEconomy: 4.8, dotBallPercentage: 50.0 },
-    { player: 'Vidura', bowlingPoints: 6.1, mostWickets: 1, bestEconomy: 3.0, dotBallPercentage: 50.0 },
-    { player: 'Amila', bowlingPoints: 5, mostWickets: 2, bestEconomy: 5.0, dotBallPercentage: 41.7 },
-    { player: 'Navin', bowlingPoints: 4.2, mostWickets: 3, bestEconomy: 8.7, dotBallPercentage: 45.5 },
-    { player: 'Weera', bowlingPoints: 1.93, mostWickets: 1, bestEconomy: 9.5, dotBallPercentage: 50.0 },
-    { player: 'Janna', bowlingPoints: 2, mostWickets: 0, bestEconomy: 5.0, dotBallPercentage: 45.5 }
-    // Add more ranking data here
-];
+    const rankingMetrics = [
+        { Player: 'Janna', OBS: 3.35, BCR: 0.14, BDF: 3.57, CPI: 0.97, SE: 1.66, SRE: 0.6, PPI: 0, DOI: 8.78 },
+        { Player: 'Oscar', OBS: 1.33, BCR: 0.34, BDF: 1.15, CPI: 0, SE: 1.32, SRE: 0.4, PPI: 0, DOI: 0 },
+        { Player: 'Weera', OBS: 5.44, BCR: 0.57, BDF: 1.49, CPI: 6.05, SE: 0.79, SRE: 0.22, PPI: 0, DOI: 30.75 },
+        { Player: 'Tikka', OBS: 4.10, BCR: 1.02, BDF: 5.38, CPI: 0.54, SE: 0.73, SRE: 0.39, PPI: 0, DOI: 3.79 },
+        { Player: 'Ranul', OBS: 8.57, BCR: 1.27, BDF: 15.68, CPI: 0, SE: 1.8, SRE: 0.59, PPI: 0, DOI: 2.59 },
+        { Player: 'Navin', OBS: 2.00, BCR: 0.076, BDF: 1.21, CPI: 0, SE: 0.94, SRE: 0.52, PPI: 0, DOI: 8.29 },
+        { Player: 'Amila', OBS: 0.66, BCR: 0, BDF: 0.44, CPI: 0, SE: 0.2, SRE: 0.46, PPI: 0, DOI: 0 },
+        { Player: 'Vidura', OBS: 2.17, BCR: 1.07, BDF: 1.37, CPI: 0, SE: 3, SRE: 0.25, PPI: 0, DOI: 0 },
+        { Player: 'Ishan', OBS: 0.095, BCR: 0, BDF: 0, CPI: 0, SE: 0.95, SRE: 0, PPI: 0, DOI: 0 },
+        { Player: 'Pamodh', OBS: 0.35, BCR: 0, BDF: 0.03, CPI: 0, SE: 1.2, SRE: 0.22, PPI: 0, DOI: 0 },
+        { Player: 'Hasintha', OBS: 0.24, BCR: 0, BDF: 0, CPI: 0, SE: 0.31, SRE: 0.21, PPI: 0, DOI: 0 }
+    ];
 
-const fieldingRankings = [
-    { player: 'Janna', fieldingPoints: 8, runOuts: 0, catches: 4 },
-    { player: 'Oscar', fieldingPoints: 5, runOuts: 1, catches: 1},
-    { player: 'Weera', fieldingPoints: 4, runOuts: 0, catches: 2 },
-    { player: 'Ranul', fieldingPoints: 4, runOuts: 0, catches: 2 },
-    { player: 'Tikka', fieldingPoints: 2, runOuts: 0, catches: 1 },
-    { player: 'Navin', fieldingPoints: 0, runOuts: 0, catches: 0 },
-    { player: 'Amila', fieldingPoints: 0, runOuts: 0, catches: 0 },
-    { player: 'Vidura', fieldingPoints: 0, runOuts: 0, catches: 0 }
-    // Add more ranking data here
-];
-
-const leagueMvp = [
-    { player: 'Oscar', mvpPoints: 20.94, runs: 13, wickets: 3 },
-    { player: 'Tikka', mvpPoints: 11.29, runs: 17, wickets: 2 },
-    { player: 'Ranul', mvpPoints: 5.46, runs: 8, wickets: 1 },
-    { player: 'Vidura', mvpPoints: 4.50, runs: 7, wickets: 1 },
-    { player: 'Janna', mvpPoints: 1.80, runs: 2, wickets: 0 },
-    { player: 'Navin', mvpPoints: 1.76, runs: 5, wickets: 3 },
-    { player: 'Weera', mvpPoints: 1.49, runs: 7, wickets: 1 },
-    { player: 'Amila', mvpPoints: 0.4, runs: 6, wickets: 2 }
-    // Add more ranking data here
-];
-
-function populateTable(tableBodyId, data, columns) {
-    const tableBody = document.getElementById(tableBodyId);
-    data.forEach(stat => {
-        const row = document.createElement('tr');
-        columns.forEach(column => {
-            const cell = document.createElement('td');
-            cell.textContent = stat[column];
-            row.appendChild(cell);
+    function populateTable(tableId, data) {
+        const tableBody = document.getElementById(tableId).querySelector('tbody');
+        tableBody.innerHTML = ''; // Clear existing rows
+        data.forEach(item => {
+            const row = document.createElement('tr');
+            Object.values(item).forEach(text => {
+                const cell = document.createElement('td');
+                cell.textContent = text;
+                row.appendChild(cell);
+            });
+            tableBody.appendChild(row);
         });
-        tableBody.appendChild(row);
+    }
+
+    function sortTable(tableId, columnIndex, isNumeric) {
+    const table = document.getElementById(tableId);
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    const sortedRows = rows.sort((a, b) => {
+        if (columnIndex === 0) return 0; // Ignore sorting for the first column
+        const aValue = isNumeric ? parseFloat(a.cells[columnIndex].textContent) : a.cells[columnIndex].textContent;
+        const bValue = isNumeric ? parseFloat(b.cells[columnIndex].textContent) : b.cells[columnIndex].textContent;
+
+        return bValue - aValue; // Sort in descending order
     });
+
+    sortedRows.forEach(row => tbody.appendChild(row));
 }
 
-window.onload = () => {
-    populateTable('individualStatsTableBody', individualStats, [
-        'player', 'inningsBatted', 'runsScored', 'ballsFaced', 'highestScore', 'battingAverage', 'notOuts', 'strikeRate', 'fours', 'sixes', 'ducks', 'thirties', 'fifties', 'oversBowled', 'wicketsTaken', 'dotBalls', 'runsGiven', 'economyRate'
-    ]);
+    function makeHeadersSortable(tableId) {
+        const table = document.getElementById(tableId);
+        const headers = table.querySelectorAll('th');
 
-    populateTable('battingRankingsTableBody', battingRankings, [
-        'player', 'battingPoints', 'mostRuns', 'battingAverage', 'strikeRate', 'mostFours', 'mostSixes', 'mostThirties', 'mostFifties'
-    ]);
+        headers.forEach((header, index) => {
+            const isNumeric = !isNaN(headers[1].textContent);
+            header.style.cursor = 'pointer';
+            header.addEventListener('click', () => sortTable(tableId, index, isNumeric));
+        });
+    }
 
-    populateTable('bowlingRankingsTableBody', bowlingRankings, [
-        'player', 'bowlingPoints', 'mostWickets', 'bestEconomy', 'dotBallPercentage'
-    ]);
+    // Populate the tables with data
+    populateTable('basic-stats-table', basicStats);
+    populateTable('advanced-stats-table', advancedStats);
+    populateTable('ranking-metrics-table', rankingMetrics);
 
-    populateTable('fieldingRankingsTableBody', fieldingRankings, [
-        'player', 'fieldingPoints', 'runOuts', 'catches'
-    ]);
+    // Make headers sortable
+    makeHeadersSortable('basic-stats-table');
+    makeHeadersSortable('advanced-stats-table');
+    makeHeadersSortable('ranking-metrics-table');
+});
 
-    populateTable('leagueMvpTableBody', leagueMvp, [
-        'player', 'mvpPoints', 'runs', 'wickets'
-    ]);
-};
