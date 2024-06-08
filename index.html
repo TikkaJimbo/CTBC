@@ -5,18 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket Statistics</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #007bff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        ul li {
+            margin: 0;
+        }
+        ul li a {
+            display: block;
+            padding: 1rem 2rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        ul li a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="batting.html">Batting Statistics</a>
         <a href="bowling.html">Bowling Statistics</a>
+        <a href="fielding.html">Fielding Statistics</a>
     </nav>
     <div class="container">
         <h1>Welcome to Cricket Statistics</h1>
-        <p>Choose a category to view the statistics:</p>
+        <p>Select a category to view detailed statistics:</p>
         <ul>
             <li><a href="batting.html">Batting Statistics</a></li>
             <li><a href="bowling.html">Bowling Statistics</a></li>
+            <li><a href="fielding.html">Fielding Statistics</a></li>
         </ul>
     </div>
 </body>
