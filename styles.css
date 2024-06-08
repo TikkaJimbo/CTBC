@@ -1,144 +1,142 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f0f0; /* Light gray background */
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #333; /* Dark gray text */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    background: #333; /* Dark gray header background */
-    color: white;
-    padding: 1em;
+    background: #0077b6;
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for header */
-    border-radius: 2px; /* Rounded corners */
-    margin-bottom: 1em; /* Add separation from the next section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #90e0ef;
 }
 
 main {
-    padding: 2em;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 section {
-    margin-bottom: 2em; /* Add separation between sections */
-    background: white; /* White background for sections */
-    border-radius: 12px; /* Rounded corners */
-    padding: 1.5em; /* Padding for sections */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for sections */
+    margin-bottom: 20px;
 }
 
-h2 {
-    text-align: center; /* Center the headings */
-}
-
-.table-container {
-    overflow-x: auto; /* Enable horizontal scrolling for mobile devices */
-    margin-bottom: 1em; /* Add separation from the next element */
+section h2 {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for tables */
-    background-color: white; /* White background for tables */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
 }
 
 th, td {
-    border: 1px solid #dee2e6;
-    padding: 0.8em; /* Adjusted cell padding */
-    text-align: left;
-    white-space: nowrap;
-    transition: background-color 0.3s;
+    padding: 0.75em;
+    text-align: center;
 }
 
 th {
-    background-color: #333; /* Dark gray background for table headers */
-    color: white;
-    font-size: 1.1em;
-    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    background-color: #0077b6;
+    color: #fff;
+    font-weight: bold;
 }
 
-/* Styling for ranking tables */
-section table tr:first-child {
-    background-color: #ffc107; /* Yellow background for first row */
-    color: black; /* Black text */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-section table tr:nth-child(2) {
-    background-color: #e0e0e0; /* Light gray background for second row */
-    color: black; /* Black text */
-}
-
-section table tr:nth-child(3) {
-    background-color: #8d6e63; /* Brown background for third row */
-    color: white; /* White text */
-}
-
-/* Hover effect for ranking table rows */
-section table tr:first-child:hover {
-    background-color: #ffe082; /* Light yellow background on hover */
-}
-
-section table tr:nth-child(2):hover {
-    background-color: #bdbdbd; /* Light gray background on hover */
-}
-
-section table tr:nth-child(3):hover {
-    background-color: #a1887f; /* Light brown background on hover */
-}
-
-/* Hover effect for other table rows */
 tr:hover {
-    background-color: #f5f5f5; /* Light gray hover color for all rows */
-}
-/* Styling for individual stats table */
-section#individual-stats table {
-    background-color: white; /* White background for table */
+    background-color: #e9f5fb;
 }
 
-/* Hover effect for individual stats table */
-section#individual-stats table tr:hover {
-    background-color: #f2f2f2; /* Light grey hover color */
+.metrics {
+    margin: 10px 0;
+    font-size: 0.9em;
+    text-align: center;
 }
 
-/* Resetting colors for individual stats table */
-section#individual-stats table tr:first-child {
-    background-color: initial; /* Reset to default background color */
+.metrics p {
+    margin: 5px 0;
 }
 
-section#individual-stats table tr:nth-child(2),
-section#individual-stats table tr:nth-child(3) {
-    background-color: initial; /* Reset to default background color */
-    color: initial; /* Reset to default text color */
-}
-/* Hover effect for individual stats table */
-section#individual-stats table tr:hover {
-    background-color: #f2f2f2; /* Light grey hover color */
-    color: black; /* Ensure text color changes on hover */
-}
-/* Freeze first column for batting rankings */
-#batting-rankings .table-container th:first-child,
-#batting-rankings .table-container td:first-child {
-    position: sticky;
-    left: 0;
-    background-color: #004080; /* Match table background */
-    z-index: 1; /* Ensure it stays above other content */
-}
+@media (max-width: 600px) {
+    table, th, td {
+        display: block;
+    }
 
-/* Ensure table heading remains fixed for batting rankings */
-#batting-rankings .table-container thead {
-    position: sticky;
-    top: 0;
-    background-color: #004080; /* Match table background */
-    z-index: 2; /* Ensure it stays above other content */
-}
-/* Adjustments for table containers */
-.table-container {
-    overflow-x: auto; /* Enable horizontal scrolling for mobile devices */
-    margin-bottom: 1em; /* Add separation from the next element */
-    max-width: calc(100% - 4em); /* Limit maximum width to prevent extension beyond padding */
-    margin: 0 auto; /* Center the table within the container */
+    th, td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    th::before, td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 0.75em;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th {
+        background-color: #0077b6;
+    }
 }
