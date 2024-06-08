@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cricket Mini League</h1>
+        <nav>
+            <ul>
+                <li><a href="batting.html">Batting Statistics</a></li>
+                <li><a href="bowling.html">Bowling Statistics</a></li>
+                <li><a href="fielding.html">Fielding Statistics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Basic Stats</h2>
+            <table id="basic-bowling-stats-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Balls Bowled</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                        <th>ER</th>
+                        <th>SR</th>
+                        <th>Avg</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Advanced Stats</h2>
+            <table id="advanced-bowling-stats-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>PP Econ</th>
+                        <th>Middle Overs Econ</th>
+                        <th>Death Econ</th>
+                        <th>Dot Ball %</th>
+                        <th>SR in Death</th>
+                        <th>SR in PP</th>
+                        <th>Chances per ball(%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Ranking Metrics</h2>
+            <div class="metrics">
+                <p><strong>ALS:</strong> All Round Score</p>
+                <p><strong>EE:</strong> Economy Enforcer</p>
+                <p><strong>TL:</strong> Threat Level</p>
+                <p><strong>PIR:</strong> Powerplay Impact Ratio</p>
+                <p><strong>DIR:</strong> Death Over Impact Ratio</p>
+            </div>
+            <table id="ranking-bowling-metrics-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>ALS</th>
+                        <th>EE</th>
+                        <th>TL</th>
+                        <th>PIR</th>
+                        <th>DIR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="bowling-script.js"></script>
+</body>
+</html>
