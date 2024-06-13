@@ -11,6 +11,7 @@
         <h1>Cricket Mini League</h1>
         <nav>
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="batting.html">Batting Statistics</a></li>
                 <li><a href="bowling.html">Bowling Statistics</a></li>
                 <li><a href="fielding.html">Fielding Statistics</a></li>
@@ -19,6 +20,7 @@
     </header>
     <main>
         <section>
+            <p>Click on any table heading to sort accordingly</p>
             <h2>Basic Stats</h2>
             <table id="basic-stats-table">
                 <thead>
@@ -62,14 +64,14 @@
         <section>
             <h2>Ranking Metrics</h2>
             <div class="metrics">
-                <p><strong>OBS:</strong> Overall Batting Score</p>
-                <p><strong>BCR:</strong> Boundary Conversion Rate</p>
-                <p><strong>BDF:</strong> Batting Dominance Factor</p>
-                <p><strong>CPI:</strong> Clutch Performance Index</p>
-                <p><strong>SE:</strong> Shot Efficiency</p>
-                <p><strong>SRE:</strong> Strike Rotation Efficiency</p>
-                <p><strong>PPI:</strong> Powerplay Impact</p>
-                <p><strong>DOI:</strong> Death Over Impact</p>
+                <p><strong>OBS:</strong> Overall Batting Score (Depends on BCR, BDF, CPI, SE, SRE, PPI, DOI)</p>
+                <p><strong>BCR:</strong> Boundary Conversion Rate (Depends on boundary balls and runs in boundaries)</p>
+                <p><strong>BDF:</strong> Batting Dominance Factor (Depends on Average, Strike Rate, Dot ball %)</p>
+                <p><strong>CPI:</strong> Clutch Performance Index (Depends on performance as Last Man Standing)</p>
+                <p><strong>SE:</strong> Shot Efficiency (Middling>Edging>Missing. When a shot is not offered it is not considered here)</p>
+                <p><strong>SRE:</strong> Strike Rotation Efficiency (Depends on runs scored while running)</p>
+                <p><strong>PPI:</strong> Powerplay Impact (Depends on Avg and SR in the Powerplay)</p>
+                <p><strong>DOI:</strong> Death Over Impact (Depends on Avg and SR in the Death overs)</p>
             </div>
             <table id="ranking-metrics-table">
                 <thead>
@@ -94,4 +96,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
