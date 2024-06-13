@@ -3,82 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Statistics</title>
+    <title>Colombo Tape Ball Cricket</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0;
             padding: 0;
         }
-        nav {
-            background-color: #007bff;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
+
+        header {
+            background: #0077b6;
             color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
+            width: 100%;
+            padding: 1rem 0;
             text-align: center;
-            color: #007bff;
-            margin-bottom: 1rem;
-        }
-        p {
-            text-align: center;
-            font-size: 1.2rem;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            align-items: center;
         }
-        ul li {
-            margin: 0;
+
+        .logo {
+            width: 150px;
+            margin-bottom: 10px;
         }
-        ul li a {
-            display: block;
-            padding: 1rem 2rem;
-            background-color: #007bff;
-            color: #fff;
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .cta-link {
             text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+            background-color: #4b94cc;
         }
-        ul li a:hover {
-            background-color: #0056b3;
+
+        .cta-link:hover {
+            background-color: #f2f26b;
+            color: #020303;
+        }
+
+        .media-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .media-item {
+            width: 80%; /* Set desired width */
+            height: auto; /* Height will adjust according to the width to maintain aspect ratio */
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .media-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .cta-links {
+                flex-direction: column;
+            }
+
+            .cta-link {
+                width: 100%;
+            }
+
+            .media-item {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="batting.html">Batting Statistics</a>
-        <a href="bowling.html">Bowling Statistics</a>
-        <a href="fielding.html">Fielding Statistics</a>
-    </nav>
-    <div class="container">
-        <h1>Welcome to Cricket Statistics</h1>
-        <p>Select a category to view detailed statistics:</p>
-        <ul>
-            <li><a href="batting.html">Batting Statistics</a></li>
-            <li><a href="bowling.html">Bowling Statistics</a></li>
-            <li><a href="fielding.html">Fielding Statistics</a></li>
-        </ul>
-    </div>
+    <header>
+        <img src="CTBC.png" alt="Colombo Tape Ball Cricket Logo" class="logo">
+    </header>
+
+    <main>
+        <div class="cta-links">
+            <a href="batting.html" class="cta-link">BATTING STATISTICS</a>
+            <a href="bowling.html" class="cta-link">BOWLING STATISTICS</a>
+            <a href="fielding.html" class="cta-link">FIELDING STATISTICS</a>
+        </div>
+
+        <div class="media-container">
+            <div class="media-item">
+                <video controls autoplay loop muted>
+                    <source src="gif.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
