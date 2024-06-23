@@ -34,7 +34,7 @@ const shotsPlayedData = [
 const bowlingPreferencesData = [
     { player: 'Janna', runsSpin: 21, runsPace: 22, avgSpin: 10.5, avgPace: 22, srSpin: 116.67, srPace: 91.67, highestSuccess: 'Fonny', lowestSuccess: 'Oscar' },
     { player: 'Oscar', runsSpin: 0, runsPace: 83, avgSpin: 0, avgPace: 27.67, srSpin: 0, srPace: 156.6, highestSuccess: 'Amila', lowestSuccess: 'Ranul' },
-    { player: 'Weera', runsSpin: 24, runsPace: 55, avgSpin: 12, avgPace: 13.75, srSpin: 100, srPace: 200, highestSuccess: 'Pamodh', lowestSuccess: 'Janna' },
+    { player: 'Weera', runsSpin: 24, runsPace: 55, avgSpin: 12, avgPace: 13.75, srSpin: 200, srPace: 100, highestSuccess: 'Pamodh', lowestSuccess: 'Janna' },
     { player: 'Tikka', runsSpin: 17, runsPace: 49, avgSpin: 17, avgPace: 12.25, srSpin: 188.9, srPace: 122.5, highestSuccess: 'Navin', lowestSuccess: 'Ranul' },
     { player: 'Ranul', runsSpin: 47, runsPace: 96, avgSpin: 47, avgPace: 24, srSpin: 276.5, srPace: 192, highestSuccess: 'Navin', lowestSuccess: 'Amila' },
     { player: 'Amila', runsSpin: 12, runsPace: 8, avgSpin: 12, avgPace: 8, srSpin: 100, srPace: 47.1, highestSuccess: 'Navin', lowestSuccess: 'Oscar' },
